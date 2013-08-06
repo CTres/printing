@@ -1,9 +1,9 @@
-class CreatePackaging < ActiveRecord::Migration
+class CreatePackagings < ActiveRecord::Migration
   def change
-    create_table :packaging do |t|
-    	belongs_to item
-    	t.string :name
-    	t.string :description
+    create_table :packagings do |t|
+    	t.belongs_to :item
+    	t.string 	 :name
+    	t.string 	 :description
       t.timestamps
     end
   end

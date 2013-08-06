@@ -1,23 +1,16 @@
 Printing::Application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+  resources :addresses
   resources :kinds
-
-
   resources :packagings
-
-
   resources :settings
-
-
   resources :items
-
-
   resources :types
-
-
   resources :users
-
-
   resources :jobs
+end
+end
 
 
   # The priority is based upon order of creation:

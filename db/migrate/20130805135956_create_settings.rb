@@ -1,7 +1,7 @@
 class CreateSettings < ActiveRecord::Migration
   def change
     create_table :settings do |t|
-    	belongs_to :item
+    	t.belongs_to :item
     	t.string   :description
     	t.string   :paper
     	t.float    :width
