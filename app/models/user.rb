@@ -1,6 +1,19 @@
 class User < ActiveRecord::Base
-  # attr_accessible :title, :body
-  # t.has_many :jobs
-  #   	t.has_many :items
-  #   	t.has_many :addresses
+	before_create :generate_token
+	#Associations
+	has_many :jobs
+	has_many :items
+	has_many :addresses
+
+	#Attributes
+	attr_reader :token
+
+	#Methods
+
+	private
+	def generate_token()
+		begin
+			self.token = SecureRandom.hex
+		end while self.class.exists?(token: token)
+	end
 end

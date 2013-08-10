@@ -1,6 +1,7 @@
 Printing::Application.routes.draw do
-  namespace :api do
+  namespace :api, defaults: {format: 'json'} do
     namespace :v1 do
+  resources :jobs
   resources :addresses
   resources :kinds
   resources :packagings
@@ -8,7 +9,7 @@ Printing::Application.routes.draw do
   resources :items
   resources :types
   resources :users
-  resources :jobs
+  
 end
 end
 
