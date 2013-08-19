@@ -1,17 +1,22 @@
 Printing::Application.routes.draw do
+
+
+root to: 'static#index'
+
+match 'users/signup' => 'users#new'
+
   namespace :api, defaults: {format: 'json'} do
     namespace :v1 do
-  resources :jobs
-  resources :addresses
-  resources :kinds
-  resources :packagings
-  resources :settings
-  resources :items
-  resources :types
-  resources :users
-  
-end
-end
+      resources :jobs
+      resources :addresses
+      resources :kinds
+      resources :packagings
+      resources :settings
+      resources :items
+      resources :types
+      resources :users
+    end
+  end
 
 
   # The priority is based upon order of creation:

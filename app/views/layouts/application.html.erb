@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Printing</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+<html lang="en">
+  <head>
+    <%= render "layouts/responsive" %>
+  </head>
+
+  <body>
+      <%= yield %> 
+  </body>
   <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
-
-</body>
 </html>
