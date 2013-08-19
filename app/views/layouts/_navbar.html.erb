@@ -1,0 +1,34 @@
+  <div class="section">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-4 w-clearfix subfooter-left">
+          <%= link_to 'PRINTR', root_path, class: 'app-name' %>
+        </div>
+        <% unless user_signed_in? %>
+          <div class="w-col w-col-8 w-clearfix nav-column">
+            <a>
+              <%= link_to 'REST API', documentation_path, class: 'nav-link' %>
+            </a>
+            <a>
+              <%= link_to 'Pricing', pricing_path, class: 'nav-link' %>
+            </a>
+            <a>
+              <%=link_to 'Signup', new_user_registration_path, class: 'nav-link' %>
+            </a>
+            <a>
+              <%=link_to 'Login', new_user_session_path, class: 'nav-link' %>
+            </a>
+          <% else %>
+            <div class="w-col w-col-8 w-clearfix nav-column">
+              <a>
+                <%= link_to 'REST API', documentation_path, class: 'nav-link' %>
+              </a>
+              <a>
+                <%=link_to 'Logout', destroy_user_session_path, class: 'nav-link', method: 'delete' %>
+              </a>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+  </div>

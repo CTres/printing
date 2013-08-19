@@ -1,12 +1,9 @@
 Printing::Application.routes.draw do
 
-
-  devise_for :users
-
-root to: 'static#index'
-
-match 'users/signup' => 'users#new'
-
+  root to: 'static#index'
+  get 'pricing', to: 'static#pricing'
+  get 'documentation', to: 'static#documentation'
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
   namespace :api, defaults: {format: 'json'} do
     namespace :v1 do
       resources :jobs

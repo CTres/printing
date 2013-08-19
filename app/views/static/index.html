@@ -2,38 +2,7 @@
 <!-- This site was created in Webflow. http://www.webflow.com--><!-- Last Published: Mon Aug 19 2013 06:31:13 GMT+0000 (UTC) -->
 <html data-wf-site="5200bdeef6557b9d040005da">
   <head>
-    <meta charset="utf-8">
-    <title>printing</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/webflow.css">
-    <link rel="stylesheet" type="text/css" href="css/printing.webflow.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-    <script>
-      WebFont.load({
-        google: {
-          families: ["Montserrat:400,700","Bitter:400,700","Droid Serif:400,700","Open Sans:300,400,600,700,800"]
-        }
-      });
-    </script>
-    <link rel="icon" type="image/x-icon" href="https://y7v4p6k4.ssl.hwcdn.net/placeholder/favicon.ico">
-    <link rel="apple-touch-icon" href="https://y7v4p6k4.ssl.hwcdn.net/51d1bb05fc804b2621000001/51e06f0756878bb26a000008_webclip-slate.png">
-    <script type="text/javascript" src="js/webflow.js" defer></script>
   </head><body>
-  <div class="section">
-    <div class="w-container">
-      <div class="w-row">
-        <div class="w-col w-col-4 w-clearfix subfooter-left">
-          <div class="app-name">PRINTR</div>
-        </div>
-        <div class="w-col w-col-8 w-clearfix nav-column"><a class="nav-link first" href="http://localhost:3000/documentation" target="_self">REST API</a><a class="nav-link" href="http://localhost:3000/pricing" target="_self">Pricing</a><a class="nav-link" href="http://localhost:3000/users/signup" target="_self">Signup</a>
-          <a
-          class="nav-link" href="http://localhost:3000/users/login" target="_self">LOGIN</a>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="w-clearfix section hero">
     <div class="w-container">
       <div class="w-row">
@@ -41,7 +10,10 @@
           <h1 class="hero-header">Cloud Based Printing &amp; mail</h1>
           <p class="hero-subtitle">REST API for printing and mailing directly from your application</p>
         </div>
-        <div class="w-col w-col-6 w-clearfix"><a class="button" href="#page-nav-organize" target="_self">Signup<br></a>
+        <div class="w-col w-col-6 w-clearfix">
+          <a> 
+            <%= button_to "Signup", new_user_registration_path, method: 'get', class: 'button' %>
+          </a>
         </div>
       </div>
     </div>
@@ -142,7 +114,10 @@
     <div class="w-container">
       <div class="w-row">
         <div class="w-col w-col-4"></div>
-        <div class="w-col w-col-4 w-clearfix"><a class="button signupbottom" href="#">Get Started</a>
+        <div class="w-col w-col-4 w-clearfix">
+          <a>
+            <%= button_to "Signup", new_user_registration_path, method: 'get', class: 'button signupbutton' %>
+          </a>
         </div>
         <div class="w-col w-col-4"></div>
       </div>
