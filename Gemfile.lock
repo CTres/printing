@@ -32,6 +32,7 @@ GEM
       hashie (>= 1.0, < 3.0)
       httparty
     arel (3.0.2)
+    bcrypt-ruby (3.1.1)
     builder (3.0.4)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -40,6 +41,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    devise (3.0.3)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -62,6 +68,7 @@ GEM
     moneta (0.7.19)
     multi_json (1.7.9)
     multi_xml (0.5.5)
+    orm_adapter (0.4.0)
     pg (0.16.0)
     polyglot (0.3.3)
     rack (1.4.5)
@@ -118,6 +125,8 @@ GEM
     uglifier (2.1.2)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    warden (1.2.3)
+      rack (>= 1.0)
     will_paginate (3.0.4)
 
 PLATFORMS
@@ -125,6 +134,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  devise
   jquery-rails
   pg
   rails (= 3.2.12)
