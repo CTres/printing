@@ -67,7 +67,7 @@ img {
   text-shadow: none;
   vertical-align: middle;
 }
-.button {
+.signupbutton {
   display: block;
   width: 160px;
   margin-top: 112px;
@@ -91,20 +91,10 @@ img {
   text-decoration: none;
   text-shadow: rgba(0, 0, 0, 0.10) 0px 2px 0px;
 }
-.button:hover {
+.signupbutton:hover {
   background-image: -webkit-linear-gradient(#ffa47d, #d7624b);
   background-image: -o-linear-gradient(#ffa47d, #d7624b);
   background-image: linear-gradient(#ffa47d, #d7624b);
-  box-shadow: rgba(255, 255, 255, 0.49) 0px 1px 0px 0px inset, #823c2e 0px 2px 0px 0px, rgba(0, 0, 0, 0.49) 0px 3px 12px 0px;
-  text-shadow: rgba(0, 0, 0, 0.10) 0px 2px 0px;
-}
-.button.app-store {
-  width: 154px;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  background-image: -webkit-linear-gradient(#ff8d5e, #d7624b);
-  background-image: -o-linear-gradient(#ff8d5e, #d7624b);
-  background-image: linear-gradient(#ff8d5e, #d7624b);
   box-shadow: rgba(255, 255, 255, 0.49) 0px 1px 0px 0px inset, #823c2e 0px 2px 0px 0px, rgba(0, 0, 0, 0.49) 0px 3px 12px 0px;
   text-shadow: rgba(0, 0, 0, 0.10) 0px 2px 0px;
 }

@@ -1,41 +1,41 @@
 <!DOCTYPE html>
-<!-- This site was created in Webflow. http://www.webflow.com--><!-- Last Published: Mon Aug 19 2013 06:31:13 GMT+0000 (UTC) -->
 <html data-wf-site="5200bdeef6557b9d040005da">
   <head>
-  </head><body>
-  <div class="w-clearfix section hero">
-    <div class="w-container">
-      <div class="w-row">
-        <div class="w-col w-col-6 w-clearfix">
+  </head>
+  <body>
+  <div class="hero-unit">
+    <div class="container">
+      <div class="row">
+        <div class="span6 offset1">
           <h1 class="hero-header">Cloud Based Printing &amp; mail</h1>
           <p class="hero-subtitle">REST API for printing and mailing directly from your application</p>
         </div>
-        <div class="w-col w-col-6 w-clearfix">
+        <div class="span4">
           <a> 
-            <%= button_to "Signup", new_user_registration_path, method: 'get', class: 'button' %>
+            <%= button_to "Signup", new_user_registration_path, method: 'get', class: 'signupbutton' %>
           </a>
         </div>
       </div>
     </div>
   </div>
-  <div class="w-clearfix white-bg section" id="page-nav-organize">
+  <div class="clearfix">
     <h2>Why you'll love using PRINTR</h2>
     <div class="w-container">
       <div class="w-row">
         <div class="w-col w-col-4 w-clearfix">
-          <img src="images/cloud_icon.png" height="114" alt="cloud_icon.png">
+          <%= image_tag 'cloud_icon.png', height: '114', class: 'landingicon' %>
           <h2 class="sequence">Send a Print Job</h2>
           <p class="marketing-text">Items can be everything from Letters to Color Posters.
             <br>
           </p>
         </div>
         <div class="w-col w-col-4 w-clearfix">
-          <img src="images/print-icon.png" alt="print-icon.png">
+          <%= image_tag 'print_icon.png', height: '114', class: 'landingicon' %>
           <h2 class="sequence">We Print...</h2>
           <p class="marketing-text">with 100's of commercial printing partners worldwide</p>
         </div>
         <div class="w-col w-col-4 w-clearfix">
-          <img src="images/mail_icon.png" alt="mail_icon.png">
+          <%= image_tag 'mail_icon.png', height: '114', class: 'landingicon' %>
           <h2 class="sequence">and Mail.</h2>
           <p class="marketing-text">We handle address confirmation and negotiate lower mailing prices by printing closer to the item's destination</p>
         </div>

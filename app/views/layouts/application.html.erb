@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <%= render 'layouts/navbar' %>
     <%= render "layouts/responsive" %>
   </head>
   <body>
-  	<%= render 'layouts/navbar' %>
-		<div class="container">
       <%= yield %> 
-    </div>
   </body>
   <%= javascript_include_tag "application" %>
 </html>
