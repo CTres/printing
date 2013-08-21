@@ -1,20 +1,23 @@
 <body id='graybg'>
-	<div class="form-user">
-			<h3 class="heading"> Create PRINTR Account</h3>
-			<hr>
-			<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-		 	  <%= f.error_notification %>
-		  	<div class="form-inputs">
-		   	 <%= f.input :email, autofocus: true, required: true, label: false, placeholder: 'Email' %>
-		   	 <%= f.input :password, required: true, label: false, placeholder: 'Password' %>
-		   	 <%= f.input :password_confirmation, required: true, label: false, placeholder: 'Confirm Password' %>
-		   	 <%= f.button :submit, "Create Your Account", class: 'btn.btn-large btn-primary', id: 'create_btn'%>
-		  	</div>
-			<% end %>
-			<hr>
-			<%= render 'devise/shared/signin' %>
+	<div class="container">
+		<div class="row">
+			<div class="span4 offset4 form-user">
+					<h3 class="heading"> Create PRINTR Account</h3>
+					<hr>
+					<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+				 	  <%= f.error_notification %>
+				  	<div class="form-inputs">
+				   	 <%= f.input :email, autofocus: true, required: true, label: false, placeholder: 'Email' %>
+				   	 <%= f.input :password, required: true, label: false, placeholder: 'Password' %>
+				   	 <%= f.input :password_confirmation, required: true, label: false, placeholder: 'Confirm Password' %>
+		   	 		 <%= f.button :submit, "Create Your Account", class: 'btn.btn-large btn-primary', id: 'create_btn'%>
+		  			</div>
+					<% end %>
+					<hr>
+					<%= render 'devise/shared/signin' %>
+			</div>
+		</div>
 	</div>
-</div>
 </body>
 
 
