@@ -4,18 +4,24 @@ Printing::Application.routes.draw do
   get 'pricing', to: 'static#pricing'
   get 'documentation', to: 'static#documentation'
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
-  namespace :api, defaults: {format: 'json'} do
-    namespace :v1 do
-      resources :jobs
-      resources :addresses
-      resources :kinds
-      resources :packagings
-      resources :settings
-      resources :items
-      resources :types
-      resources :users
-    end
+  
+  api versions: 1, module: "api/v1" do
+    resources :jobs  
   end
+
+
+  # namespace :api, defaults: {format: 'json'} do
+  #   namespace :v1 do
+  #     resources :jobs
+  #     resources :addresses
+  #     resources :kinds
+  #     resources :packagings
+  #     resources :settings
+  #     resources :items
+  #     resources :types
+  #     resources :users
+  #   end
+  # end
 
 
   # The priority is based upon order of creation:
