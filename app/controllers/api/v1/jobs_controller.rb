@@ -1,26 +1,24 @@
-class API::V1::JobsController < ApplicationController
+class API::V1::JobsController < BaseController
 	before_filter :restrict_access
-	TOKEN = "SECRET"
-respond_to :json
-
+	
 	def index
-		@jobs = @user.jobs.all
-		respond_with(@jobs)
+		jobs = @user.jobs.all
+		expose jobs
 	end
 
 	def show
-		@job = @user.jobs.find(params[:id])
-		respond_with(@job)
+		job = @user.jobs.find(params[:id])
+		expose job
 	end
 
 	def create
-		
+		job = @user.jobs.create(params[:job])
+		expose job
 	end
 
-	private
+private
 	def restrict_access
-		puts "in restrict access"
-		authenticate_or_request_with_http_token do |token, options|
+		error! :unauthenticated unless authenticate_with_http_token do |token, options|
 			@user = User.find_by_token(token)
 		end
 	end

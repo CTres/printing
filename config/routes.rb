@@ -1,17 +1,32 @@
 Printing::Application.routes.draw do
-  namespace :api, defaults: {format: 'json'} do
-    namespace :v1 do
-  resources :jobs
-  resources :addresses
-  resources :kinds
-  resources :packagings
-  resources :settings
-  resources :items
-  resources :types
-  resources :users
+  authenticated :user do 
+    root to: 'users#index', as: 'dashboard'
+  end
+  root to: 'static#index'
+  get 'pricing', to: 'static#pricing'
+  get 'documentation', to: 'static#documentation'
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
   
-end
-end
+resources :jobs
+
+  api versions: 1, module: "api/v1" do
+    resources :jobs  
+    resources :addresses
+  end
+
+
+  # namespace :api, defaults: {format: 'json'} do
+  #   namespace :v1 do
+  #     resources :jobs
+  #     resources :addresses
+  #     resources :kinds
+  #     resources :packagings
+  #     resources :settings
+  #     resources :items
+  #     resources :types
+  #     resources :users
+  #   end
+  # end
 
 
   # The priority is based upon order of creation:
