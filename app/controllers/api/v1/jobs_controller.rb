@@ -12,7 +12,7 @@ class API::V1::JobsController < BaseController
 	end
 
 	def create
-		job = Job.create(params[:job])
+		job = @user.jobs.create(params[:job])
 		expose job
 	end
 
