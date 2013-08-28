@@ -1,9 +1,10 @@
 class Job < ActiveRecord::Base
   #Associations
   belongs_to :user
-  has_one :to_adr, class_name: 'Address', through: :jobs_addresses
-  has_one :from_adr, class_name: 'Address', through: :jobs_addresses
-  accepts_nested_attributes_for :addresses
+  has_many :addresses
+  # has_one :to_adr, class_name: 'Address', through: :jobs_addresses
+  # has_one :from_adr, class_name: 'Address', through: :jobs_addresses
+  # accepts_nested_attributes_for :addresses
   has_many :items 
   #accepts_nested_attributes_for :items
   

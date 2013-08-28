@@ -53,7 +53,7 @@
     <div class="w-container">
       <div class="w-row">
         <div class="w-col w-col-6 w-clearfix">
-          <img class="map" src="images/map.png" width="648" height="450" alt="images/map.png">
+          <%= image_tag 'map.png', class: 'map' %>
         </div>
         <div class="w-col w-col-6 w-clearfix">
           <h2 class="simple" id="page-nav-address">Verified Addresses</h2>
@@ -101,24 +101,14 @@
   </div>
   <div class="section white-bg">
     <div class="w-container">
+                <a>
+            <%= button_to "Signup", new_user_registration_path, method: 'get', class: 'signupbottom' %>
+          </a>
       <div class="blockquote">"PRINTR is the sendgrid for physical mail."</div>
     </div>
   </div>
-  <div class="w-clearfix section purple">
-    <div class="w-container">
-      <div class="w-row">
-        <div class="w-col w-col-4"></div>
-        <div class="w-col w-col-4 w-clearfix">
-          <a>
-            <%= button_to "Signup", new_user_registration_path, method: 'get', class: 'button signupbutton' %>
-          </a>
-        </div>
-        <div class="w-col w-col-4"></div>
-      </div>
-    </div>
-  </div>
   <div class="section grey-bg footer">
-    <div class="w-container"><a class="footer-link" href="http://www.flickr.com/photos/kara_allyson/" target="_blank">Copyright @PRINTR AB, 2013<br></a>
+    <div class="w-container"><a class="footer-link"  target="_blank">Copyright @PRINTR AB, 2013<br></a>
     </div>
   </div>
 </body>

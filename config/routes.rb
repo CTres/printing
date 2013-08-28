@@ -1,10 +1,14 @@
 Printing::Application.routes.draw do
-
+  authenticated :user do 
+    root to: 'users#index', as: 'dashboard'
+  end
   root to: 'static#index'
   get 'pricing', to: 'static#pricing'
   get 'documentation', to: 'static#documentation'
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
   
+resources :jobs
+
   api versions: 1, module: "api/v1" do
     resources :jobs  
     resources :addresses
