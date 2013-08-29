@@ -4,6 +4,11 @@
 	<ul class="unstyled">
 <li> status: <%= job.status %> </li>
 <li> created at: <%= job.created_at %> 		 </li>
+<% unless job.recipients.nil? %>
+    <% job.recipients.each do |r| %>
+     <li> <%= r.name %> </li>
+    <% end %>
+  <% end %>
 <span>
 <br>
 </p>

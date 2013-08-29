@@ -1,6 +1,7 @@
 Printing::Application.routes.draw do
   authenticated :user do 
     root to: 'users#index', as: 'dashboard'
+    get 'settings', to: 'users#settings'
   end
   root to: 'static#index'
   get 'pricing', to: 'static#pricing'

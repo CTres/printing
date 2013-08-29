@@ -1,12 +1,12 @@
 class Job < ActiveRecord::Base
   #Associations
   belongs_to :user
-  has_many :addresses
-  # has_one :to_adr, class_name: 'Address', through: :jobs_addresses
-  # has_one :from_adr, class_name: 'Address', through: :jobs_addresses
-  # accepts_nested_attributes_for :addresses
-  has_many :items 
-  #accepts_nested_attributes_for :items
+  has_many :job_addresses
+  has_many :recipients, class_name: 'Address', through: :job_addresses, source: :address
+  accepts_nested_attributes_for :recipients, reject_if: proc { |attributes| attributes['address_line1'].blank? }
+  
+  has_one :item
+  accepts_nested_attributes_for :item
   
   #Attributes
   attr_accessible :name, :price, :quantity, :status, :items, :to_adr, :from_adr

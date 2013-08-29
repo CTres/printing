@@ -1,16 +1,13 @@
 <body>
-
 	<div class='container dashboard'>
 		<div class="row">
-			<div class='span6 offset1'>
-				<%= render @jobs %>
-			</div>
-			<div class="span4 offset1">
-				<div class="well">
-					<h3> <%= @user.email %> </h3>
-					<h4> API Token: </h4>
-					<%= @user.token %>
-				</div>
+			<div class='span8 offset2'>
+				<ul class="breadcrumb">
+  <li class="active">Jobs</a> <span class="divider">|</span></li>
+  <li><a href="#">Recipients</a> <span class="divider">|</span></li>
+  <li><a href="settings">Settings</a></li>
+</ul>
+				<%= render @jobs.reverse %>
 			</div>
 		</div>
 	</div>
