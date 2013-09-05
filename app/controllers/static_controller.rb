@@ -7,10 +7,5 @@ class StaticController < ApplicationController
 	end
 
 	def documentation
-	end
-
-	def google 
-	end
-	
-	
+	end	
 end
