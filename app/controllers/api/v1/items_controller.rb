@@ -1,6 +1,4 @@
-class API::V1::ItemsController < BaseController
-	respond_to :json
-	
+class API::V1::ItemsController < BaseController	
 	def index 
 		@user = User.find_by_token(params[:token])
 		@items = @user.items.all
