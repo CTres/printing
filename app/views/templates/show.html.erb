@@ -7,7 +7,8 @@
 				  <li><%= link_to "Templates", templates_path %> <span class="divider">|</span></li>
 				  <li><%= link_to "Settings", settings_path %></li>
 				</ul>
-				<iframe width = "920" height="1000" seamless=true src= <%= @template.url %> ></iframe>
+				<h5 id="loader" style="position: absolute;top: 150px">Template loading. Please wait...</h1>
+				<iframe width = "920" height="1000" seamless=true onload="hideProgress()" src= <%= @template.url %> ></iframe>
 			</div>
 		</div>
 	</div>
