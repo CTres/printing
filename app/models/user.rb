@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
 	has_many :jobs
 	has_many :items
 	has_many :addresses
+	has_many :templates
 
 	#Attributes
 	

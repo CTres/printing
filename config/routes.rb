@@ -1,4 +1,7 @@
 Printing::Application.routes.draw do
+  resources :templates
+
+
   authenticated :user do 
     root to: 'users#index', as: 'dashboard'
     get 'settings', to: 'users#settings'
