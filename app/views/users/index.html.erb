@@ -1,15 +1,14 @@
-<body>
-	<div class='container dashboard'>
-		<div class="row">
-			<div class='span10 offset1'>
-				<ul class="breadcrumb">
-  <li class="active">Jobs</a> <span class="divider">|</span></li>
-  <li><a href="/templates">Templates</a> <span class="divider">|</span></li>
-  <li><a href="settings">Settings</a></li>
-</ul>
-				<%= render @jobs.reverse %>
-			</div>
+<div class='container dashboard'>
+	<div class="row">
+		<div class='span10 offset1'>
+			<ul class="breadcrumb">
+				<li class="active">Jobs</a> <span class="divider">|</span></li>
+				<li><a href="/templates">Templates</a> <span class="divider">|</span></li>
+				<li><a href="settings">Settings</a></li>
+			</ul>
+			<%= render @jobs.reverse %>
 		</div>
 	</div>
-</body>
+</div>
+
 

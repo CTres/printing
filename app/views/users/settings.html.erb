@@ -1,18 +1,17 @@
-<body>
-	<div class='container dashboard'>
-		<div class="row">
-			<div class="span10 offset1">
-				<ul class="breadcrumb">
-  <li><a href="/">Jobs</a> <span class="divider">|</span></li>
-  <li><a href="/templates">Templates</a> <span class="divider">|</span></li>
-  <li class="active">Settings</a></li>
-</ul>
-				<div class="well">
-					<h3> <%= @user.email %> </h3>
-					<h4> API Token: </h4>
-					<%= @user.token %>
-				</div>
+
+<div class='container dashboard'>
+	<div class="row">
+		<div class="span10 offset1">
+			<ul class="breadcrumb">
+				<li><a href="/">Jobs</a> <span class="divider">|</span></li>
+				<li><a href="/templates">Templates</a> <span class="divider">|</span></li>
+				<li class="active">Settings</a></li>
+			</ul>
+			<div class="well">
+				<h3> <%= @user.email %> </h3>
+				<h4> API Token: </h4>
+				<%= @user.token %>
 			</div>
 		</div>
 	</div>
-</body>
+</div>

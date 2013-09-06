@@ -1,15 +1,13 @@
-<body>
-	<div class='container dashboard'>
-		<div class="row">
-			<div class='span10 offset1'>
-				<ul class="breadcrumb">
-				  <li><%= link_to "Jobs", root_path %> <span class="divider">|</span></li>
-				  <li><%= link_to "Templates", templates_path %> <span class="divider">|</span></li>
-				  <li><%= link_to "Settings", settings_path %></li>
-				</ul>
-				<h5 id="loader" style="position: absolute;top: 150px">Template loading. Please wait...</h1>
-				<iframe width = "920" height="1000" seamless=true onload="hideProgress()" src= <%= @template.url %> ></iframe>
-			</div>
+<div class='container dashboard'>
+	<div class="row">
+		<div class='span10 offset1'>
+			<ul class="breadcrumb">
+			  <li><%= link_to "Jobs", root_path %> <span class="divider">|</span></li>
+			  <li><%= link_to "Templates", templates_path %> <span class="divider">|</span></li>
+			  <li><%= link_to "Settings", settings_path %></li>
+			</ul>
+			<h5 id="loader" style="position: absolute;top: 150px">Template loading. Please wait...</h1>
+			<iframe width = "920" height="1000" seamless=true onload="hideProgress()" src= <%= @template.url %> ></iframe>
 		</div>
 	</div>
-</body>
+</div>

@@ -1,28 +1,26 @@
-<body>
-	<div class='container dashboard'>
-		<div class="row">
-			<div class='span10 offset1'>
-				<ul class="breadcrumb">
-				  <li><a href="/">Jobs</a> <span class="divider">|</span></li>
-				  <li class="active">Templates</a> <span class="divider">|</span></li>
-				  <li><a href="settings">Settings</a></li>
-				</ul>
-				<table class="table striped">
-				  <thead>
-				    <tr>
-				      <th>Template</th>
-				    </tr>
-				  </thead>
-				  <tbody>
-				    <% @templates.each do |template| %>
-				      <tr>
-				        <td><%= link_to template.name, template %></td>
-				      </tr>
-				    <% end %>
-				  </tbody>
-				</table>
-			</div>
+<div class='container dashboard'>
+	<div class="row">
+		<div class='span10 offset1'>
+			<ul class="breadcrumb">
+			  <li><a href="/">Jobs</a> <span class="divider">|</span></li>
+			  <li class="active">Templates</a> <span class="divider">|</span></li>
+			  <li><a href="settings">Settings</a></li>
+			</ul>
+			<table class="table striped">
+			  <thead>
+			    <tr>
+			      <th>Template</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <% @templates.each do |template| %>
+			      <tr>
+			        <td><%= link_to template.name, template %></td>
+			      </tr>
+			    <% end %>
+			  </tbody>
+			</table>
 		</div>
 	</div>
-</body>
+</div>
 
